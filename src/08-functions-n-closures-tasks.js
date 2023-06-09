@@ -85,7 +85,7 @@ function memoize(func) {
   let a = null;
   let isFirstRun = true;
 
-  return function () {
+  return function memoizedFunc() {
     if (isFirstRun) {
       a = func();
       isFirstRun = false;
